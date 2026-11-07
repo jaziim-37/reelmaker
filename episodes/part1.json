@@ -1,0 +1,14 @@
+{
+  "part": 1,
+  "hook": "Rename 500 files in 4 lines",
+  "language": "python",
+  "code": "from pathlib import Path\n\npics = Path().glob('*.jpg')\nfor i, p in enumerate(pics):\n    p.rename(f'img_{i}.jpg')",
+  "highlight": [5],
+  "caption": "Path.rename does the heavy lifting",
+  "result": "500 files renamed in 0.2s",
+  "cliffhanger": {
+    "question": "What if img_1.jpg already exists?",
+    "optionA": "It overwrites it",
+    "optionB": "It crashes"
+  }
+}
